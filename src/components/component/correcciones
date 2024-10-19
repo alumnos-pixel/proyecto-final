@@ -1,0 +1,67 @@
+import React, { useState, useCallback, useEffect } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './path/to/Carousel'; // Ajusta la importación según tu estructura de archivos
+
+export default function HeroSection() {
+  const [api, setApi] = useState<CarouselApi | null>(null); // Estado para almacenar la API del carrusel
+  const [currentIndex, setCurrentIndex] = useState<number>(0); // Estado para el índice actual
+
+  // Maneja el cambio de diapositiva usando la API
+  const handleSlideChange = useCallback(() => {
+    if (api) {
+      const index = api.scrollSnapList().indexOf(api.getScrollProgress()); // Obtiene el índice de la diapositiva activa
+      setCurrentIndex(index);
+      console.log('Current slide index:', index);
+    }
+  }, [api]);
+
+  // Desplaza al slide anterior
+  const handlePrevClick = () => {
+    if (api) {
+      api.scrollPrev();
+    }
+  };
+
+  // Desplaza al slide siguiente
+  const handleNextClick = () => {
+    if (api) {
+      api.scrollNext();
+    }
+  };
+
+  // Configuración de la API
+  useEffect(() => {
+    if (api) {
+      api.on('select', handleSlideChange);
+      return () => {
+        api.off('select', handleSlideChange);
+      };
+    }
+  }, [api, handleSlideChange]);
+
+  return (
+    <main className="flex-1 p-8">
+      <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
+        <section id="hero" className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col justify-center">
+            <Carousel
+              setApi={setApi} // Proporciona la API del carrusel a través del estado
+              opts={{ loop: true }} // Configuración opcional para el carrusel
+            >
+              <CarouselContent>
+                <CarouselItem>
+                  {/* Contenido de la diapositiva */}
+                </CarouselItem>
+                <CarouselItem>
+                  {/* Contenido de la diapositiva */}
+                </CarouselItem>
+                {/* Agrega más CarouselItem según sea necesario */}
+              </CarouselContent>
+              <CarouselPrevious onClick={handlePrevClick} />
+              <CarouselNext onClick={handleNextClick} />
+            </Carousel>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
