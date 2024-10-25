@@ -5,10 +5,10 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { AutoplayType } from "embla-carousel-autoplay"
+
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -101,27 +101,14 @@ const Carousel = React.forwardRef<
       [scrollPrev, scrollNext]
     )
 
-    React.useEffect(() => {
-      if (!api || !setApi) {
-        return
-      }
+    useEffect(() => {
+  const interval = setInterval(() => {
+    api?.scrollNext();
+  }, 5000); // Adjust the interval as needed
 
-      setApi(api)
-    }, [api, setApi])
+  return () => clearInterval(interval);
+}, [api]);
 
-    React.useEffect(() => {
-      if (!api) {
-        return
-      }
-
-      onSelect(api)
-      api.on("reInit", onSelect)
-      api.on("select", onSelect)
-
-      return () => {
-        api?.off("select", onSelect)
-      }
-    }, [api, onSelect])
 
     return (
       <CarouselContext.Provider
