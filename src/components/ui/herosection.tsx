@@ -10,6 +10,7 @@ import Link from "next/link"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 
 
@@ -26,9 +27,9 @@ export default function HeroSection () {
     if (sectionElement) {
       sectionElement.scrollIntoView ({ behavior: "smooth" })
     };
-  }
-
-
+  };
+  
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
@@ -43,12 +44,12 @@ export default function HeroSection () {
   return <div className="bg-fondo flex flex-col min-h-screen bg-gradient-to-br from-[#2b203d] to-[#8e859e]">
  
 
-<header className="bg-gradient-to-b from-[#4158D0] to-[#C850C0] py-4 px-6 shadow-md">
+<header className="bg-gradient-to-b from-[#4158D0] to-[#C850C0] py-4 px-6">
         <div className="flex justify-between items-center">
           <Link href="#" className="flex items-center gap-2 text-white font-bold text-2xl 
           w-8 h-8 " prefetch={false}>
             
-            <span className="text-white font-blinker-bold">Strangers Online </span>
+            <span className=" text-my-color font-blinker-bold">Strangers Online </span>
           </Link>
           <button className="text-white hover:underline md:hidden" onClick={toggleMenu}>
             <MenuIcon className="w-6 h-6" />
@@ -81,7 +82,7 @@ export default function HeroSection () {
         </div>
         </header>
       <main className="flex-1 p-8">
-        <div className=" bg-white bg-opacity-80 rounded-lg shadow-lg">
+        <div className=" bg-white bg-opacity-100 rounded-lg shadow-lg">
           
           <section id="hero">
             <div className="bg-background-image bg-cover bg-no-repeat flex flex-col justify-center items-center rounded-lg" > 
@@ -103,8 +104,8 @@ export default function HeroSection () {
                     />
                     <div className="mt-4" >
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Bienvenido a Strangers Online!</h1>
-                      <p className="text-lg font-bold text-[#757575] mb-6">
-                        Diviértete con juegos, descubre nuevas fotos y mantente actualizado con nuestras noticias.
+                      <p className="text-my-color font-bold text-[#757575] mb-6">
+                        ¡Diviértete con juegos, descubre nuevos videos y disfruta informandote!
                       </p>
                     </div>
                   </CarouselItem>
@@ -118,9 +119,10 @@ export default function HeroSection () {
                       style={{ aspectRatio: "800/450", objectFit: "cover" }}
                     />
                     <div className="mt-4">
-                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Explora nuestros Juegos</h1>
-                      <p className="text-lg font-blond text-[#757575] mb-6">
-                        Pon a prueba tus habilidades con nuestros emocionantes juegos.
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">SabÍas que...</h1>
+                      <p className="text-my-color font-blond text-[#757575] mb-6">
+                        Podes comunicarte grátis a través de la línea 102 ante cualquier inquietud
+                        o duda.
                       </p>
                     </div>
                   </CarouselItem>
@@ -134,9 +136,10 @@ export default function HeroSection () {
                       style={{ aspectRatio: "800/450", objectFit: "cover" }}
                     />
                     <div className="mt-4">
-                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Descubre nuestra Galería</h1>
-                      <p className="text-lg text-[#757575] mb-6">
-                        Disfruta de las increíbles imágenes que hemos recopilado para ti.
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Las leyes son divertidas!</h1>
+                      <p className="text-my-color text-[#757575] mb-6">
+                        Es importante sentirse seguro y conocer las leyes de nuestro país ante cualquier 
+                        inconveniente o situación incómoda.
                       </p>
                     </div>
                   </CarouselItem>
@@ -150,19 +153,18 @@ export default function HeroSection () {
                       style={{ aspectRatio: "800/450", objectFit: "cover" }}
                     />
                     <div className="mt-4">
-                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Mantente Informado</h1>
-                      <p className="text-lg text-[#757575] mb-6">
-                        Entérate de las últimas noticias y novedades en Fun Zone.
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
+                      <p className="text-my-color text-[#757575] mb-6">
+                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada "Ley Micaela
+                        Ortega".  
                       </p>
+                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#4CAF50] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
+                        Más información sobre las leyes
+                       </Link>
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
-                  <ChevronLeftIcon className="w-6 h-6 text-primary" />
-                </CarouselPrevious>
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
-                  <ChevronRightIcon className="w-6 h-6 text-primary" />
-                </CarouselNext>
+                
               </Carousel>
             </div>
             
@@ -248,7 +250,7 @@ export default function HeroSection () {
                   <button>
 
                  <a href="https://www.youtube.com/watch?v=O1bbS25JngQ">
-                  <img
+                  <iframe
                     src="/placeholder.svg"
                     width={800}
                     height={450}
@@ -264,7 +266,7 @@ export default function HeroSection () {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <img
+                  <iframe
                     src="/placeholder.svg"
                     width={800}
                     height={450}
@@ -346,7 +348,7 @@ export default function HeroSection () {
                     width={400}
                     height={225}
                     alt="News Image 1"
-                    className="rounded-lg shadow-lg mb-4 cursor-pointer"
+                    className="rounded-lg  mb-4 cursor-pointer"
                     style={{ aspectRatio: "400/225", objectFit: "cover" }}
                   />
                   <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
@@ -367,11 +369,48 @@ export default function HeroSection () {
         </div>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-<p className="text-xs text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
+<p className="text-xs text-my-color text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-  <a className="text-xs hover:underline underline-offset-4" href="https://buenosaires.gob.ar/que-es-el-grooming-y-que-podemos-hacer-para-combatirlo">
-    Contacto de ayuda
-  </a>
+
+<Link href=""
+target="_blank">
+        <img
+          src="/img/facebook-icon.svg"
+          alt="Icono de facebook"
+          width={32}
+          height={32}
+        
+        />
+      </Link>
+  
+
+<Link href="https://www.instagram.com/dgnyalarioja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+target="_blank">
+        <img
+          src="/img/Instagram-icon.svg"
+          alt="Icono de Instagram"
+          width={32}
+          height={32}
+        
+        />
+      </Link>
+
+      <Link href=""
+target="_blank">
+        <img
+          src="/img/Instagram-icon.svg"
+          alt="Icono de telefono"
+          width={32}
+          height={32}
+        
+        />
+      </Link>
+  
+  
+<Link className="text-xs hover:underline underline-offset-4" href="https://buenosaires.gob.ar/que-es-el-grooming-y-que-podemos-hacer-para-combatirlo" 
+        target='_blank' rel='noopener noreferrer'>
+          Contacto de ayuda
+        </Link>
   <a className="text-xs hover:underline underline-offset-4" href="#">
     Privacy
   </a>

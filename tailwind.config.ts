@@ -27,6 +27,7 @@ const config: Config = {
       //@ts-ignore
       "background": "blue #2b203d",
       "foreground": "hsl(var(--foreground))",
+      "my-color": "#fcfcfc",
       
       "primary": {
         "DEFAULT": "hsl(var(--primary))",
