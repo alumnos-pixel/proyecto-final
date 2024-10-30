@@ -48,8 +48,15 @@ export default function HeroSection () {
         <div className="flex justify-between items-center">
           <Link href="#" className="flex items-center gap-2 text-white font-bold text-2xl 
           w-8 h-8 " prefetch={false}>
+            <img
+            src="https://i.imgur.com/g98YTSK.png"
+            width={400}
+                      height={150}
+                      alt="Strangers Online logo"
+
+            />
             
-            <span className=" text-my-color font-blinker-bold">Strangers Online </span>
+            <span className=" text-my-color font-blinker-bold"> Strangers Online </span>
           </Link>
           <button className="text-white hover:underline md:hidden" onClick={toggleMenu}>
             <MenuIcon className="w-6 h-6" />
@@ -297,7 +304,7 @@ export default function HeroSection () {
                 <CardContent className="p-6">
                   
                   <img
-                    src="/placeholder.svg"
+                    src="https://i.imgur.com/L6K9oZe.jpeg"
                     width={400}
                     height={225}
                     alt="News Image 1"
@@ -319,7 +326,7 @@ export default function HeroSection () {
               <Card>
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <img
-                    src="/placeholder.svg"
+                    src="https://i.imgur.com/ma61sob.jpeg"
                     width={400}
                     height={225}
                     alt="News Image 1"
@@ -344,15 +351,15 @@ export default function HeroSection () {
                <Card> 
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <img
-                    src="/placeholder.svg"
+                    src="https://i.imgur.com/zM9CFMm.jpeg"
                     width={400}
                     height={225}
                     alt="News Image 1"
                     className="rounded-lg  mb-4 cursor-pointer"
                     style={{ aspectRatio: "400/225", objectFit: "cover" }}
                   />
-                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
-                  <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
+                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">¿Cómo puedo apoyar a mi hijo?</h3>
+                  <p className="text-lg text-[#757575]">Formas de apoyo emocional.</p>
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     href="#"
@@ -375,7 +382,7 @@ export default function HeroSection () {
 <Link href=""
 target="_blank">
         <img
-          src="/img/facebook-icon.svg"
+          src="https://i.imgur.com/sAEVVs1.png"
           alt="Icono de facebook"
           width={32}
           height={32}
@@ -387,7 +394,7 @@ target="_blank">
 <Link href="https://www.instagram.com/dgnyalarioja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 target="_blank">
         <img
-          src="/img/Instagram-icon.svg"
+          src="https://i.imgur.com/rIRhjMy.png "
           alt="Icono de Instagram"
           width={32}
           height={32}
@@ -398,7 +405,7 @@ target="_blank">
       <Link href=""
 target="_blank">
         <img
-          src="/img/Instagram-icon.svg"
+          src="https://i.imgur.com/KoAz7j2.png"
           alt="Icono de telefono"
           width={32}
           height={32}
