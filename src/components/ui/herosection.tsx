@@ -41,7 +41,7 @@ export default function HeroSection () {
   }, []) 
   
 
-  return <div className="bg-fondo flex flex-col min-h-screen bg-gradient-to-br from-[#2b203d] to-[#8e859e]">
+  return <div className=" flex flex-col min-h-screen bg-gradient-to-br from-[#2b203d] to-[#8e859e]">
  
 
 <header className="bg-gradient-to-b from-[#4158D0] to-[#C850C0] py-4 px-6">
@@ -51,12 +51,12 @@ export default function HeroSection () {
             <img
             src="https://i.imgur.com/g98YTSK.png"
             width={400}
-                      height={150}
+                      height={400}
                       alt="Strangers Online logo"
 
             />
             
-            <span className=" text-my-color font-blinker-bold"> Strangers Online </span>
+            <span className=" text-my-color font-blinker"> Strangers Online </span>
           </Link>
           <button className="text-white hover:underline md:hidden" onClick={toggleMenu}>
             <MenuIcon className="w-6 h-6" />
@@ -102,7 +102,7 @@ export default function HeroSection () {
                 <CarouselContent>
                   <CarouselItem>
                     <img
-                      src=""
+                      src=" https://i.imgur.com/nczfm5c.png"
                       width={800}
                       height={450}
                       alt="Hero Image 1"
@@ -118,7 +118,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="/placeholder.svg"
+                      src="https://i.imgur.com/UlX9QY5.png"
                       width={800}
                       height={350}
                       alt="Hero Image 2"
@@ -126,7 +126,7 @@ export default function HeroSection () {
                       style={{ aspectRatio: "800/450", objectFit: "cover" }}
                     />
                     <div className="mt-4">
-                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">SabÍas que...</h1>
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Sabías que...</h1>
                       <p className="text-my-color font-blond text-[#757575] mb-6">
                         Podes comunicarte grátis a través de la línea 102 ante cualquier inquietud
                         o duda.
@@ -135,7 +135,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="/placeholder.svg"
+                      src="https://i.imgur.com/Lco2tEj.png"
                       width={800}
                       height={450}
                       alt="Hero Image 3"
@@ -143,7 +143,7 @@ export default function HeroSection () {
                       style={{ aspectRatio: "800/450", objectFit: "cover" }}
                     />
                     <div className="mt-4">
-                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Las leyes son divertidas!</h1>
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Las leyes que nos amparan</h1>
                       <p className="text-my-color text-[#757575] mb-6">
                         Es importante sentirse seguro y conocer las leyes de nuestro país ante cualquier 
                         inconveniente o situación incómoda.
@@ -152,7 +152,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="/placeholder.svg"
+                      src="https://i.imgur.com/ZpH1G9k.png"
                       width={800}
                       height={450}
                       alt="Hero Image 4"
@@ -199,12 +199,14 @@ export default function HeroSection () {
                   <PuzzleIcon className="w-12 h-12 text-[#9C27B0] mb-4" />
                   <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Rompecabezas</h3>
                   <p className="text-lg text-[#757575]">Arma el rompecabezas para revelar la imagen oculta.</p>
+                 
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     href="#"
                   >
                     Jugar
                   </Button>
+                  
                 </CardContent>
               </Card>
              <Card> 
@@ -235,17 +237,16 @@ export default function HeroSection () {
               <CarouselContent>
                 <CarouselItem>
                 <button>
-                <a href="https://www.youtube.com/watch?v=tch4ShnGwd0"><img
-                    src="/placeholder.svg"
-                    width={800}
-                    height={450}
-                    alt="Gallery Image 1"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/tch4ShnGwd0?si=3-w83nUcZwKeoSoB" title="YouTube video player"
+                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                 className="rounded-lg shadow-lg"
+                    style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
+                    
+                    
                   
-                  />
-                  </a>
-                  
+             
+                 
+            
                   </button>
                   
                   <div className="mt-4">
@@ -256,16 +257,8 @@ export default function HeroSection () {
                 <CarouselItem>
                   <button>
 
-                 <a href="https://www.youtube.com/watch?v=O1bbS25JngQ">
-                  <iframe
-                    src="/placeholder.svg"
-                    width={800}
-                    height={450}
-                    alt="Gallery Image 2"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
-                </a>
+                  <iframe width="800" height="450" src="https://www.youtube.com/embed/O1bbS25JngQ?si=oi2Mti6EAFWcKtnh" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </button>
                   <div className="mt-4">
                     <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">¿Que es el grooming?</h3>
@@ -273,17 +266,15 @@ export default function HeroSection () {
                   </div>
                 </CarouselItem>
                 <CarouselItem>
-                  <iframe
-                    src="/placeholder.svg"
-                    width={800}
-                    height={450}
-                    alt="Gallery Image 3"
+                  
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/4cKb-8LxCrE?si=7T0PJjEcpP2yRuny" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                     className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
+                    style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
+                  
                   <div className="mt-4">
-                    <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Flores en primavera</h3>
-                    <p className="text-lg text-[#757575]">Admira la belleza de las flores en primavera.</p>
+                    <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Ciberseguridad</h3>
+                    <p className="text-lg text-[#757575]">Aprendé a como proteger tu seguridad ante el internet.</p>
                   </div>
                 </CarouselItem>
               </CarouselContent>
@@ -364,7 +355,7 @@ export default function HeroSection () {
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     href="#"
                   >
-                    Jugar
+                    Ver
                   </Button>
                 </CardContent>
               </Card>
@@ -402,16 +393,7 @@ target="_blank">
         />
       </Link>
 
-      <Link href=""
-target="_blank">
-        <img
-          src="https://i.imgur.com/KoAz7j2.png"
-          alt="Icono de telefono"
-          width={32}
-          height={32}
-        
-        />
-      </Link>
+      
   
   
 <Link className="text-xs hover:underline underline-offset-4" href="https://buenosaires.gob.ar/que-es-el-grooming-y-que-podemos-hacer-para-combatirlo" 
