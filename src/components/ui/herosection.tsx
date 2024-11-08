@@ -376,7 +376,7 @@ export default function HeroSection () {
 <p className="text-xs text-my-color text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
 
-<Link href=""
+<Link href="https://www.facebook.com/share/15RnWCo53f/?mibextid=kFxxJD"
 target="_blank">
         <img
           src="https://i.imgur.com/sAEVVs1.png"
