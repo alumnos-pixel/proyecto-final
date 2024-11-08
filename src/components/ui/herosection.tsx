@@ -118,7 +118,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/UlX9QY5.png"
+                      src=""
                       width={800}
                       height={350}
                       alt="Hero Image 2"
@@ -135,7 +135,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/Lco2tEj.png"
+                      src=""
                       width={800}
                       height={450}
                       alt="Hero Image 3"
@@ -152,7 +152,7 @@ export default function HeroSection () {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/ZpH1G9k.png"
+                      src=""
                       width={800}
                       height={450}
                       alt="Hero Image 4"
@@ -162,8 +162,8 @@ export default function HeroSection () {
                     <div className="mt-4">
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
                       <p className="text-my-color text-[#757575] mb-6">
-                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada "Ley Micaela
-                        Ortega".  
+                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
+                        Ortega.  
                       </p>
                       <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#4CAF50] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
                         Más información sobre las leyes
@@ -185,10 +185,12 @@ export default function HeroSection () {
                 <CardContent className="bg-fondo flex flex-col items-center justify-center p-6">
                   <GamepadIcon className="w-12 h-12 text-[#FF6B6B] mb-4" />
                   <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Laberinto</h3>
+                
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
+                  
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                  
                   >
                     Jugar
                   </Button>
@@ -202,10 +204,12 @@ export default function HeroSection () {
                  
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                  
                   >
                     Jugar
                   </Button>
+                  <Link href="https://wordwall.net/es/resource/25288277/%c3%a9tica-y-ciudadan%c3%ada/grooming"
+                      target="_blank"></Link>
                   
                 </CardContent>
               </Card>
@@ -216,7 +220,7 @@ export default function HeroSection () {
                   <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    
                   >
                     Jugar
                   </Button>
@@ -231,14 +235,16 @@ export default function HeroSection () {
             <Carousel 
               className="w-full max-w-2x"
               currentSlide={currentSlide}
+              //@ts-ignore
               onSlideChange={(slide) => setCurrentSlide(slide)}
-              opts={{ loop: true, autoplay: { delay: 5000, disableOnInteraction: false } }}
+              //@ts-ignore
+              opts={{ autoplay: { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
                 <CarouselItem>
                 <button>
                 <iframe width="800" height="450" src="https://www.youtube.com/embed/tch4ShnGwd0?si=3-w83nUcZwKeoSoB" title="YouTube video player"
-                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
                  className="rounded-lg shadow-lg"
                     style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
                     
@@ -258,7 +264,7 @@ export default function HeroSection () {
                   <button>
 
                   <iframe width="800" height="450" src="https://www.youtube.com/embed/O1bbS25JngQ?si=oi2Mti6EAFWcKtnh" 
-                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </button>
                   <div className="mt-4">
                     <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">¿Que es el grooming?</h3>
@@ -268,7 +274,7 @@ export default function HeroSection () {
                 <CarouselItem>
                   
                     <iframe width="800" height="450" src="https://www.youtube.com/embed/4cKb-8LxCrE?si=7T0PJjEcpP2yRuny" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
                     className="rounded-lg shadow-lg"
                     style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
                   
@@ -331,7 +337,7 @@ export default function HeroSection () {
 
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    
                   >
                     Ver video
                   </Button>
@@ -353,7 +359,7 @@ export default function HeroSection () {
                   <p className="text-lg text-[#757575]">Formas de apoyo emocional.</p>
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    
                   >
                     Ver
                   </Button>
@@ -385,6 +391,7 @@ target="_blank">
 <Link href="https://www.instagram.com/dgnyalarioja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
 target="_blank">
         <img
+      
           src="https://i.imgur.com/rIRhjMy.png "
           alt="Icono de Instagram"
           width={32}
