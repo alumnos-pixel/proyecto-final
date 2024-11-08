@@ -235,9 +235,9 @@ export default function HeroSection () {
             <Carousel 
               className="w-full max-w-2x"
               currentSlide={currentSlide}
-              //@ts-ignore
+             
               onSlideChange={(slide) => setCurrentSlide(slide)}
-              //@ts-ignore
+            
               opts={{ autoplay: { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
