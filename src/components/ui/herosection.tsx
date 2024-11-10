@@ -144,7 +144,7 @@ export default function HeroSection() {
                     <div className="mt-4">
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Las leyes que nos amparan</h1>
                       <p className="text-my-color text-[#757575] mb-6">
-                        Es importante sentirse seguro y conocer las leyes de nuestro país ante cualquier 
+                        Es importante sentirse seguro y conocer las leyes de nuestro pais ante cualquier 
                         inconveniente o situación incómoda.
                       </p>
                     </div>
