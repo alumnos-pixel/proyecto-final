@@ -64,6 +64,7 @@ export default function HeroSection() {
         <nav
           className={`flex flex-col md:flex-row items-start md:items-center gap-4 ${menuOpen ? "block" : "hidden"
             } md:block`}
+
         >
           <button
             className={`text-white hover:underline ${activeSection === "hero" ? "font-bold" : ""}`}
@@ -229,11 +230,11 @@ export default function HeroSection() {
           <h2 className="text-3xl font-bold text-[#4CAF50] mb-4"> El grooming </h2>
           <Carousel
             className="w-full max-w-2x"
-            currentSlide={currentSlide}
+            
             //@ts-ignore
-            onSlideChange={(slide) => setCurrentSlide(slide)}
-            //@ts-ignore
-            opts={{ loop: true, autoplay: { delay: 5000, disableOnInteraction: false } }}
+             onSlideChange={(slideIndex: number) => setCurrentSlide(slideIndex)}
+              opts={{ loop: true }}
+            
           >
             <CarouselContent>
               <CarouselItem>

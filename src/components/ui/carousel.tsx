@@ -104,7 +104,7 @@ const Carousel = React.forwardRef<
     useEffect(() => {
   const interval = setInterval(() => {
     api?.scrollNext();
-  }, 5000); // Adjust the interval as needed
+  }, 7000); // Adjust the interval as needed
 
   return () => clearInterval(interval);
 }, [api]);
