@@ -187,7 +187,7 @@ export default function HeroSection() {
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    ref={}
+                    ref="#"
                   >
                     Jugar
                   </Button>
