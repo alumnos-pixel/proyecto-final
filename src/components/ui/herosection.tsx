@@ -187,7 +187,7 @@ export default function HeroSection() {
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    ref={}
                   >
                     Jugar
                   </Button>
@@ -201,7 +201,7 @@ export default function HeroSection() {
                  
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    
                   >
                     Jugar
                   </Button>
@@ -215,7 +215,7 @@ export default function HeroSection() {
                   <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    href="#"
+                    
                   >
                     Jugar
                   </Button>
