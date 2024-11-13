@@ -161,10 +161,10 @@ export default function HeroSection() {
                     <div className="mt-4">
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
                       <p className="text-my-color text-[#757575] mb-6">
-                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada "Ley Micaela
-                        Ortega".  
+                        En nuestro pais contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
+                        Ortega.  
                       </p>
-                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#4CAF50] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
+                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
                         Más información sobre las leyes
                        </Link>
                     </div>
