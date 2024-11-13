@@ -164,7 +164,7 @@ export default function HeroSection() {
                         En nuestro pais contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
                         Ortega.  
                       </p>
-                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
+                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
                         Más información sobre las leyes
                        </Link>
                     </div>
@@ -187,7 +187,7 @@ export default function HeroSection() {
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    ref="#"
+                    
                   >
                     Jugar
                   </Button>
@@ -230,7 +230,9 @@ export default function HeroSection() {
             <Carousel 
               className="w-full max-w-2x"
               currentSlide={currentSlide}
+              //@ts-ignore
               onSlideChange={(slide) => setCurrentSlide(slide)}
+              //@ts-ignore
               opts={{ loop: true, autoplay: { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
