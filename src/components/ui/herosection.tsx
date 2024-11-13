@@ -64,180 +64,177 @@ export default function HeroSection() {
         <nav
           className={`flex flex-col md:flex-row items-start md:items-center gap-4 ${menuOpen ? "block" : "hidden"
             } md:block`}
-
-        >
-          <button
-            className={`text-white hover:underline ${activeSection === "hero" ? "font-bold" : ""}`}
-            onClick={() => handleSectionClick("hero")}
           >
-
-          </button>
-
-          <button
-            className={`text-white hover:underline ${activeSection === "gallery" ? "font-bold" : ""}`}
-            onClick={() => handleSectionClick("gallery")}
-          >
-
-          </button>
-          <button
-            className={`text-white hover:underline ${activeSection === "news" ? "font-bold" : ""}`}
-            onClick={() => handleSectionClick("news")}
-          >
-
-          </button>
-        </nav>
-      </div>
-    </header>
-    <main className="flex-1 p-8">
-      <div className=" bg-white bg-opacity-100 rounded-lg shadow-lg">
-
-        <section id="hero">
-          <div className="bg-background-image bg-cover bg-no-repeat flex flex-col justify-center items-center rounded-lg" >
-            <Carousel
-              className="w-full max-w-md"
-              //@ts-ignore ts.ignore
-              onSlideChange={(slideIndex: number) => setCurrentSlide(slideIndex)}
-              opts={{ loop: true }}
+            <button
+              className={`text-white hover:underline ${activeSection === "hero" ? "font-bold" : ""}`}
+              onClick={() => handleSectionClick("hero")}
+            >
+              
+            </button>
+            
+            <button
+              className={`text-white hover:underline ${activeSection === "gallery" ? "font-bold" : ""}`}
+              onClick={() => handleSectionClick("gallery")}
+            >
+          
+            </button>
+            <button
+              className={`text-white hover:underline ${activeSection === "news" ? "font-bold" : ""}`}
+              onClick={() => handleSectionClick("news")}
+            >
+              
+            </button>
+          </nav>
+        </div>
+        </header>
+      <main className="flex-1 p-8">
+        <div className=" bg-white bg-opacity-100 rounded-lg shadow-lg">
+          
+          <section id="hero">
+            <div className="bg-background-image bg-cover bg-no-repeat flex flex-col justify-center items-center rounded-lg" > 
+              <Carousel
+                className="w-full max-w-md"
+               //@ts-ignore ts.ignore
+                onSlideChange={(slideIndex: number) => setCurrentSlide(slideIndex)}
+                opts={{ loop: true }}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <img
+                      src=" https://i.imgur.com/nczfm5c.png"
+                      width={800}
+                      height={450}
+                      alt="Hero Image 1"
+                      className="rounded-lg shadow-lg"
+                      style={{ aspectRatio: "800/450", objectFit: "cover" }}
+                    />
+                    <div className="mt-4" >
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Bienvenido a Strangers Online!</h1>
+                      <p className="text-my-color font-bold text-[#757575] mb-6">
+                        ¡Diviértete con juegos, descubre nuevos videos y disfruta informandote!
+                      </p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="https://i.imgur.com/UlX9QY5.png"
+                      width={800}
+                      height={350}
+                      alt="Hero Image 2"
+                      className="rounded-lg shadow-lg"
+                      style={{ aspectRatio: "800/450", objectFit: "cover" }}
+                    />
+                    <div className="mt-4">
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Sabías que...</h1>
+                      <p className="text-my-color font-blond text-[#757575] mb-6">
+                        Podes comunicarte grátis a través de la línea 102 ante cualquier inquietud
+                        o duda.
+                      </p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="https://i.imgur.com/Lco2tEj.png"
+                      width={800}
+                      height={450}
+                      alt="Hero Image 3"
+                      className="rounded-lg shadow-lg"
+                      style={{ aspectRatio: "800/450", objectFit: "cover" }}
+                    />
+                    <div className="mt-4">
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Las leyes que nos amparan</h1>
+                      <p className="text-my-color text-[#757575] mb-6">
+                        Es importante sentirse seguro y conocer las leyes de nuestro país ante cualquier 
+                        inconveniente o situación incómoda.
+                      </p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="https://i.imgur.com/ZpH1G9k.png"
+                      width={800}
+                      height={450}
+                      alt="Hero Image 4"
+                      className="rounded-lg shadow-lg"
+                      style={{ aspectRatio: "800/450", objectFit: "cover" }}
+                    />
+                    <div className="mt-4">
+                      <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
+                      <p className="text-my-color text-[#757575] mb-6">
+                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada "Ley Micaela
+                        Ortega".  
+                      </p>
+                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#4CAF50] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
+                        Más información sobre las leyes
+                       </Link>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                
+              </Carousel>
+            </div>
+            
+          </section>
+        </div>
+        <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
+          <section id="games" className="mb-8">
+            <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Juegos</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <Card>
+                <CardContent className="bg-fondo flex flex-col items-center justify-center p-6">
+                  <GamepadIcon className="w-12 h-12 text-[#FF6B6B] mb-4" />
+                  <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Laberinto</h3>
+                  <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
+                  <Button
+                    className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
+                    href="#"
+                  >
+                    Jugar
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <PuzzleIcon className="w-12 h-12 text-[#9C27B0] mb-4" />
+                  <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Rompecabezas</h3>
+                  <p className="text-lg text-[#757575]">Arma el rompecabezas para revelar la imagen oculta.</p>
+                 
+                  <Button
+                    className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
+                    href="#"
+                  >
+                    Jugar
+                  </Button>
+                  
+                </CardContent>
+              </Card>
+             <Card> 
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <Dice1Icon className="w-12 h-12 text-[#673AB7] mb-4" />
+                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
+                  <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
+                  <Button
+                    className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
+                    href="#"
+                  >
+                    Jugar
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        </div>
+        <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8 justify-center p-6 ">
+          <section id="gallery" className="mb-8">
+            <h2 className="text-3xl font-bold text-[#4CAF50] mb-4"> El grooming </h2>
+            <Carousel 
+              className="w-full max-w-2x"
+              currentSlide={currentSlide}
+              onSlideChange={(slide) => setCurrentSlide(slide)}
+              opts={{ loop: true, autoplay: { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
                 <CarouselItem>
-                  <img
-                    src=" https://i.imgur.com/nczfm5c.png"
-                    width={800}
-                    height={450}
-                    alt="Hero Image 1"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
-                  <div className="mt-4" >
-                    <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Bienvenido a Strangers Online!</h1>
-                    <p className="text-my-color font-bold text-[#757575] mb-6">
-                      ¡Diviértete con juegos, descubre nuevos videos y disfruta informandote!
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <img
-                    src="https://i.imgur.com/UlX9QY5.png"
-                    width={800}
-                    height={350}
-                    alt="Hero Image 2"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
-                  <div className="mt-4">
-                    <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Sabías que...</h1>
-                    <p className="text-my-color font-blond text-[#757575] mb-6">
-                      Podes comunicarte grátis a través de la línea 102 ante cualquier inquietud
-                      o duda.
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <img
-                    src="https://i.imgur.com/Lco2tEj.png"
-                    width={800}
-                    height={450}
-                    alt="Hero Image 3"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
-                  <div className="mt-4">
-                    <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Las leyes que nos amparan</h1>
-                    <p className="text-my-color text-[#757575] mb-6">
-                      Es importante sentirse seguro y conocer las leyes de nuestro país ante cualquier
-                      inconveniente o situación incómoda.
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <img
-                    src="https://i.imgur.com/ZpH1G9k.png"
-                    width={800}
-                    height={450}
-                    alt="Hero Image 4"
-                    className="rounded-lg shadow-lg"
-                    style={{ aspectRatio: "800/450", objectFit: "cover" }}
-                  />
-                  <div className="mt-4">
-                    <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
-                    <p className="text-my-color text-[#757575] mb-6">
-                      En nuestro pais contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
-                      Ortega.
-                    </p>
-                    <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
-                      Más información sobre las leyes
-                    </Link>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-
-            </Carousel>
-          </div>
-
-        </section>
-      </div>
-      <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
-        <section id="games" className="mb-8">
-          <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Juegos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="bg-fondo flex flex-col items-center justify-center p-6">
-                <GamepadIcon className="w-12 h-12 text-[#FF6B6B] mb-4" />
-                <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Laberinto</h3>
-                <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
-                <Button
-                  className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                  
-                >
-                  Jugar
-                </Button>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex flex-col items-center justify-center p-6">
-                <PuzzleIcon className="w-12 h-12 text-[#9C27B0] mb-4" />
-                <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Rompecabezas</h3>
-                <p className="text-lg text-[#757575]">Arma el rompecabezas para revelar la imagen oculta.</p>
-
-                <Button
-                  className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                  
-                >
-                  Jugar
-                </Button>
-
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex flex-col items-center justify-center p-6">
-                <Dice1Icon className="w-12 h-12 text-[#673AB7] mb-4" />
-                <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
-                <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
-                <Button
-                  className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                  
-                >
-                  Jugar
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </div>
-      <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8 justify-center p-6 ">
-        <section id="gallery" className="mb-8">
-          <h2 className="text-3xl font-bold text-[#4CAF50] mb-4"> El grooming </h2>
-          <Carousel
-            className="w-full max-w-2x"
-            
-            //@ts-ignore
-             onSlideChange={(slideIndex: number) => setCurrentSlide(slideIndex)}
-              opts={{ loop: true }}
-            
-          >
-            <CarouselContent>
-              <CarouselItem>
                 <button>
                   <iframe width="800" height="450" src="https://www.youtube.com/embed/tch4ShnGwd0?si=3-w83nUcZwKeoSoB" title="YouTube video player"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
