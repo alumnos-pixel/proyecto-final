@@ -185,12 +185,14 @@ export default function HeroSection() {
                   <GamepadIcon className="w-12 h-12 text-[#FF6B6B] mb-4" />
                   <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Laberinto</h3>
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
+                  <Link href="https://wordwall.net/es/resource/25288277">
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     
                   >
                     Jugar
                   </Button>
+                </Link>
                 </CardContent>
               </Card>
               <Card>
@@ -198,27 +200,29 @@ export default function HeroSection() {
                   <PuzzleIcon className="w-12 h-12 text-[#9C27B0] mb-4" />
                   <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Rompecabezas</h3>
                   <p className="text-lg text-[#757575]">Arma el rompecabezas para revelar la imagen oculta.</p>
-                 
+                  <Link href="https://p.interacty.me/9476b04a6d3846d9/iframe.html">
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     
                   >
                     Jugar
                   </Button>
-                  
+                  </Link>
                 </CardContent>
               </Card>
              <Card> 
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <Dice1Icon className="w-12 h-12 text-[#673AB7] mb-4" />
-                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
-                  <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
+                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Objetos ocultos</h3>
+                  <p className="text-lg text-[#757575]">Encontra todas las anomalías.</p>
+                  <Link href="https://interacty.me/projects/814fdc2065bbfeea">
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     
                   >
                     Jugar
                   </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -290,7 +294,7 @@ export default function HeroSection() {
       </div>
       <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
         <section id="news" className="mb-8">
-          <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Capacitarte</h2>
+          <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Recursos didácticos</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <Card>
               <CardContent className="p-6">
@@ -303,12 +307,10 @@ export default function HeroSection() {
                   className="rounded-lg shadow-lg mb-4 cursor-pointer"
                   style={{ aspectRatio: "400/225", objectFit: "cover" }}
                 />
-                <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Grooming para padres/madres</h3>
+                <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Grooming para padres</h3>
                 <p className="text-lg text-[#757575] mb-4">
 
-                  Si bien está establecido que nuestra pagina está más bien orientada para niños/jovenes,
-                  también creemos que es importante el conocimiento en tutores y educadores. De igual manera como la forma
-                  o técnicas de enseñanza de esta temática.
+        
                 </p>
                 <a href="https://www.iprofesional.com/tecnologia/327561--grooming-que-es-cuando-comienza-y-como-se-manifiesta"></a>
                 <Button className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py"> Haga click para ver más</Button>
@@ -326,9 +328,8 @@ export default function HeroSection() {
                   style={{ aspectRatio: "400/225", objectFit: "cover" }}
                 />
                 <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Video explicativo</h3>
-                <p className="text-lg text-[#757575]">Nos gusta lo interactivo, por lo tanto, también les dejamos
-                  un video de como tratar el grooming desde una perspectiva de padre/madre/educador.</p>
-                <a href="https://www.youtube.com/watch?v=8Ry-Vy4Piws">
+                <p className="text-lg text-[#757575]">¿Cómo tratar el grooming cómo padre?.</p>
+                <a href="https://www.youtube.com/watch?v=8Ry-Vy4Piws" target="_blank">
 
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
@@ -352,12 +353,14 @@ export default function HeroSection() {
                 />
                 <h3 className="text-2xl font-bold text-[#673AB7] mb-2">¿Cómo puedo apoyar a mi hijo?</h3>
                 <p className="text-lg text-[#757575]">Formas de apoyo emocional.</p>
+                <Link href="https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/guia-para-madres-padres-docentes-grooming" target="_blank">
                 <Button
                   className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                  
                 >
                   Ver
                 </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -371,7 +374,7 @@ export default function HeroSection() {
       <p className="text-xs text-my-color text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
 
-        <Link href=""
+        <Link href="https://www.facebook.com/share/15RnWCo53f/?mibextid=kFxxJD"
           target="_blank">
           <img
             src="https://i.imgur.com/sAEVVs1.png"
