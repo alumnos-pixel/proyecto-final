@@ -328,7 +328,7 @@ export default function HeroSection() {
                   style={{ aspectRatio: "400/225", objectFit: "cover" }}
                 />
                 <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Video explicativo</h3>
-                <p className="text-lg text-[#757575]">¿Cómo tratar el grooming cómo padre?.</p>
+                <p className="text-lg text-[#757575]">¿Cómo tratar el grooming cómo padre?</p>
                 <a href="https://www.youtube.com/watch?v=8Ry-Vy4Piws" target="_blank">
 
                   <Button
