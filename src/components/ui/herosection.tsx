@@ -237,7 +237,7 @@ export default function HeroSection() {
               //@ts-ignore
               onSlideChange={(slide) => setCurrentSlide(slide)}
               //@ts-ignore
-              opts={{ loop: true, autoplay: { delay: 5000, disableOnInteraction: false } }}
+              opts={{ loop: true, { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
                 <CarouselItem>
