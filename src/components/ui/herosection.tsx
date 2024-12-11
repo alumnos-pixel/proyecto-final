@@ -111,7 +111,7 @@ export default function HeroSection() {
                     <div className="mt-4" >
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Bienvenido a Strangers Online!</h1>
                       <p className="text-my-color font-bold text-[#757575] mb-6">
-                        ¡Diviértete con juegos, descubre nuevos videos y disfruta informandote!
+                        ¡Aprende sobre la ciberseguridad con nuestros juegos y videos!
                       </p>
                     </div>
                   </CarouselItem>
@@ -162,10 +162,10 @@ export default function HeroSection() {
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
                       <p className="text-my-color text-[#757575] mb-6">
                         En nuestro pais contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
-                        Ortega.  
+                        Ortega. Puedes hacer click abajo para conocer mas.
                       </p>
                       <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
-                        Más información sobre las leyes
+                        Click aqui!
                        </Link>
                     </div>
                   </CarouselItem>
@@ -256,7 +256,7 @@ export default function HeroSection() {
 
                 <div className="mt-4">
                   <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Pequeños cortos animados</h3>
-                  <p className="text-lg text-[#757575]">Dejamos pequeños cortos de concientización.</p>
+                  <p className="text-lg text-[#757575]">Dejamos pequeños cortos de concientización. Desliza para ver los otros videos.</p>
                 </div>
               </CarouselItem>
               <CarouselItem>
@@ -283,12 +283,8 @@ export default function HeroSection() {
                 </div>
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
-              <ChevronLeftIcon className="w-6 h-6 text-primary" />
-            </CarouselPrevious>
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
-              <ChevronRightIcon className="w-6 h-6 text-primary" />
-            </CarouselNext>
+         
+    
           </Carousel>
         </section>
       </div>
