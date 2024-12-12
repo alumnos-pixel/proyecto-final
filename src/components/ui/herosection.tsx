@@ -15,8 +15,7 @@ import Image from "next/image"
 
 
 
-
-export default function HeroSection() {
+export default function HeroSection () {
 
   const [activeSection, setActiveSection] = useState("hero")
   const [menuOpen, setMenuOpen] = useState(false)
@@ -25,11 +24,11 @@ export default function HeroSection() {
     setActiveSection(section)
     const sectionElement = document.getElementById(section);
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth" })
+      sectionElement.scrollIntoView ({ behavior: "smooth" })
     };
   };
-
-
+  
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
@@ -38,31 +37,32 @@ export default function HeroSection() {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % 4)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
-
+  }, []) 
+  
 
   return <div className=" flex flex-col min-h-screen bg-gradient-to-br from-[#2b203d] to-[#8e859e]">
+ 
 
-
-    <header className="bg-gradient-to-b from-[#4158D0] to-[#C850C0] py-4 px-6">
-      <div className="flex justify-between items-center">
-        <Link href="#" className="flex items-center gap-2 text-white font-bold text-2xl 
+<header className="bg-gradient-to-b from-[#4158D0] to-[#C850C0] py-4 px-6">
+        <div className="flex justify-between items-center">
+          <Link href="#" className="flex items-center gap-2 text-white font-bold text-2xl 
           w-8 h-8 " prefetch={false}>
-          <img
+            <img
             src="https://i.imgur.com/g98YTSK.png"
             width={400}
-            height={400}
-            alt="Strangers Online logo"
+                      height={400}
+                      alt="Strangers Online logo"
 
-          />
-
-          <span className=" text-my-color font-blinker"> Strangers Online </span>
-        </Link>
-        <button className="text-white hover:underline md:hidden" onClick={toggleMenu}>
-          <MenuIcon className="w-6 h-6" />
-        </button>
-        <nav
-          className={`flex flex-col md:flex-row items-start md:items-center gap-4 ${menuOpen ? "block" : "hidden"
+            />
+            
+            <span className=" text-my-color font-blinker"> Strangers Online </span>
+          </Link>
+          <button className="text-white hover:underline md:hidden" onClick={toggleMenu}>
+            <MenuIcon className="w-6 h-6" />
+          </button>
+          <nav
+            className={`flex flex-col md:flex-row items-start md:items-center gap-4 ${
+              menuOpen ? "block" : "hidden"
             } md:block`}
           >
             <button
@@ -111,13 +111,13 @@ export default function HeroSection() {
                     <div className="mt-4" >
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">¡Bienvenido a Strangers Online!</h1>
                       <p className="text-my-color font-bold text-[#757575] mb-6">
-                        ¡Aprende sobre la ciberseguridad con nuestros juegos y videos!
+                        ¡Diviértete con juegos, descubre nuevos videos y disfruta informandote!
                       </p>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/UlX9QY5.png"
+                      src=""
                       width={800}
                       height={350}
                       alt="Hero Image 2"
@@ -134,7 +134,7 @@ export default function HeroSection() {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/Lco2tEj.png"
+                      src=""
                       width={800}
                       height={450}
                       alt="Hero Image 3"
@@ -151,7 +151,7 @@ export default function HeroSection() {
                   </CarouselItem>
                   <CarouselItem>
                     <img
-                      src="https://i.imgur.com/ZpH1G9k.png"
+                      src=""
                       width={800}
                       height={450}
                       alt="Hero Image 4"
@@ -161,11 +161,11 @@ export default function HeroSection() {
                     <div className="mt-4">
                       <h1 className="text-4xl font-bold text-[#4CAF50] mb-4">Por eso...</h1>
                       <p className="text-my-color text-[#757575] mb-6">
-                        En nuestro pais contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
-                        Ortega. Puedes hacer click abajo para conocer mas.
+                        En nuestro país contamos con la Ley 26.904 y la Ley 27.590 denominada Ley Micaela
+                        Ortega.  
                       </p>
-                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#FF6B6B] text-my-color-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
-                        Click aqui!
+                      <Link href="https://www.argentinacibersegura.org/noalgrooming/ley-de-grooming" className="bg-[#4CAF50] text-my-color font-blond px-4 py-2 rounded-md hover:bg-[#388E3C]" target="_blank">
+                        Más información sobre las leyes
                        </Link>
                     </div>
                   </CarouselItem>
@@ -184,15 +184,15 @@ export default function HeroSection() {
                 <CardContent className="bg-fondo flex flex-col items-center justify-center p-6">
                   <GamepadIcon className="w-12 h-12 text-[#FF6B6B] mb-4" />
                   <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Laberinto</h3>
+                
                   <p className="text-lg text-[#757575]">Ayuda al personaje a encontrar la salida del laberinto.</p>
-                  <Link href="https://wordwall.net/es/resource/25288277">
+                  
                   <Button
                     className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    
+                  
                   >
                     Jugar
                   </Button>
-                </Link>
                 </CardContent>
               </Card>
               <Card>
@@ -200,29 +200,29 @@ export default function HeroSection() {
                   <PuzzleIcon className="w-12 h-12 text-[#9C27B0] mb-4" />
                   <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Rompecabezas</h3>
                   <p className="text-lg text-[#757575]">Arma el rompecabezas para revelar la imagen oculta.</p>
-                  <Link href="https://p.interacty.me/9476b04a6d3846d9/iframe.html">
+                 
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                    
+                  
                   >
                     Jugar
                   </Button>
-                  </Link>
+                  <Link href="https://wordwall.net/es/resource/25288277/%c3%a9tica-y-ciudadan%c3%ada/grooming"
+                      target="_blank"></Link>
+                  
                 </CardContent>
               </Card>
              <Card> 
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <Dice1Icon className="w-12 h-12 text-[#673AB7] mb-4" />
-                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Objetos ocultos</h3>
-                  <p className="text-lg text-[#757575]">Encontra todas las anomalías.</p>
-                  <Link href="https://interacty.me/projects/814fdc2065bbfeea">
+                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">Dados</h3>
+                  <p className="text-lg text-[#757575]">Lanza los dados y compite con tus amigos.</p>
                   <Button
                     className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
                     
                   >
                     Jugar
                   </Button>
-                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -234,180 +234,186 @@ export default function HeroSection() {
             <Carousel 
               className="w-full max-w-2x"
               currentSlide={currentSlide}
-              //@ts-ignore
+             
               onSlideChange={(slide) => setCurrentSlide(slide)}
-              //@ts-ignore
-              opts={{ loop: true, { delay: 5000, disableOnInteraction: false } }}
+            
+              opts={{ autoplay: { delay: 5000, disableOnInteraction: false } }}
             >
               <CarouselContent>
                 <CarouselItem>
                 <button>
-                  <iframe width="800" height="450" src="https://www.youtube.com/embed/tch4ShnGwd0?si=3-w83nUcZwKeoSoB" title="YouTube video player"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/tch4ShnGwd0?si=3-w83nUcZwKeoSoB" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+                 className="rounded-lg shadow-lg"
+                    style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
+                    
+                    
+                  
+             
+                 
+            
+                  </button>
+                  
+                  <div className="mt-4">
+                    <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Pequeños cortos animados</h3>
+                    <p className="text-lg text-[#757575]">Dejamos pequeños cortos de concientización.</p>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <button>
+
+                  <iframe width="800" height="450" src="https://www.youtube.com/embed/O1bbS25JngQ?si=oi2Mti6EAFWcKtnh" 
+                  title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </button>
+                  <div className="mt-4">
+                    <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">¿Que es el grooming?</h3>
+                    <p className="text-lg text-[#757575]"></p>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/4cKb-8LxCrE?si=7T0PJjEcpP2yRuny" 
+                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
                     className="rounded-lg shadow-lg"
                     style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
+                  
+                  <div className="mt-4">
+                    <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Ciberseguridad</h3>
+                    <p className="text-lg text-[#757575]">Aprendé a como proteger tu seguridad ante el internet.</p>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                <ChevronLeftIcon className="w-6 h-6 text-primary" />
+              </CarouselPrevious>
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary">
+                <ChevronRightIcon className="w-6 h-6 text-primary" />
+              </CarouselNext>
+            </Carousel>
+          </section>
+        </div>
+        <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
+          <section id="news" className="mb-8">
+            <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Capacitarte</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <Card> 
+                <CardContent className="p-6">
+                  
+                  <img
+                    src="https://i.imgur.com/L6K9oZe.jpeg"
+                    width={400}
+                    height={225}
+                    alt="News Image 1"
+                    className="rounded-lg shadow-lg mb-4 cursor-pointer"
+                    style={{ aspectRatio: "400/225", objectFit: "cover" }}
+                  />
+                  <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Grooming para padres/madres</h3>
+                  <p className="text-lg text-[#757575] mb-4">
+                    
+                  Si bien está establecido que nuestra pagina está más bien orientada para niños/jovenes,
+                 también creemos que es importante el conocimiento en tutores y educadores. De igual manera como la forma
+                  o técnicas de enseñanza de esta temática.
+                  </p>
+                  <a href="https://www.iprofesional.com/tecnologia/327561--grooming-que-es-cuando-comienza-y-como-se-manifiesta"></a>
+                  <Button className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py"> Haga click para ver más</Button> 
+                </CardContent>
+              </Card>
 
-
-
-
-
-
-                </button>
-
-                <div className="mt-4">
-                  <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Pequeños cortos animados</h3>
-                  <p className="text-lg text-[#757575]">Dejamos pequeños cortos de concientización. Desliza para ver los otros videos.</p>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <button>
-
-                  <iframe width="800" height="450" src="https://www.youtube.com/embed/O1bbS25JngQ?si=oi2Mti6EAFWcKtnh"
-                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                </button>
-                <div className="mt-4">
-                  <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">¿Que es el grooming?</h3>
-                  <p className="text-lg text-[#757575]"></p>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/4cKb-8LxCrE?si=7T0PJjEcpP2yRuny"
-                  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
-                  className="rounded-lg shadow-lg"
-                  style={{ aspectRatio: "800/450", objectFit: "cover" }}></iframe>
-
-                <div className="mt-4">
-                  <h3 className="text-2xl font-bold text-[#4CAF50] mb-2">Ciberseguridad</h3>
-                  <p className="text-lg text-[#757575]">Aprendé a como proteger tu seguridad ante el internet.</p>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-         
-    
-          </Carousel>
-        </section>
-      </div>
-      <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 mb-8">
-        <section id="news" className="mb-8">
-          <h2 className="text-3xl font-bold text-[#4CAF50] mb-4">Recursos didácticos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="p-6">
-
-                <img
-                  src="https://i.imgur.com/L6K9oZe.jpeg"
-                  width={400}
-                  height={225}
-                  alt="News Image 1"
-                  className="rounded-lg shadow-lg mb-4 cursor-pointer"
-                  style={{ aspectRatio: "400/225", objectFit: "cover" }}
-                />
-                <h3 className="text-2xl font-bold text-[#FF6B6B] mb-2">Grooming para padres</h3>
-                <p className="text-lg text-[#757575] mb-4">
-
-        
-                </p>
-                <a href="https://www.iprofesional.com/tecnologia/327561--grooming-que-es-cuando-comienza-y-como-se-manifiesta"></a>
-                <Button className="bg-[#FF6B6B] hover:bg-[#E53935] text-white font-bold py"> Haga click para ver más</Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="flex flex-col items-center justify-center p-6">
-                <img
-                  src="https://i.imgur.com/ma61sob.jpeg"
-                  width={400}
-                  height={225}
-                  alt="News Image 1"
-                  className="rounded-lg shadow-lg mb-4 cursor-pointer"
-                  style={{ aspectRatio: "400/225", objectFit: "cover" }}
-                />
-                <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Video explicativo</h3>
-                <p className="text-lg text-[#757575]">¿Cómo tratar el grooming cómo padre?</p>
-                <a href="https://www.youtube.com/watch?v=8Ry-Vy4Piws" target="_blank">
+              <Card>
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <img
+                    src="https://i.imgur.com/ma61sob.jpeg"
+                    width={400}
+                    height={225}
+                    alt="News Image 1"
+                    className="rounded-lg shadow-lg mb-4 cursor-pointer"
+                    style={{ aspectRatio: "400/225", objectFit: "cover" }}
+                  />
+                  <h3 className="text-2xl font-bold text-[#9C27B0] mb-2">Video explicativo</h3>
+                  <p className="text-lg text-[#757575]">Nos gusta lo interactivo, por lo tanto, también les dejamos
+                     un video de como tratar el grooming desde una perspectiva de padre/madre/educador.</p>
+                     <a href="https://www.youtube.com/watch?v=8Ry-Vy4Piws">
 
                   <Button
                     className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                   
+                    
                   >
                     Ver video
                   </Button>
-                </a>
-              </CardContent>
-            </Card>
+                  </a>
+                </CardContent>
+              </Card>
 
-            <Card>
-              <CardContent className="flex flex-col items-center justify-center p-6">
-                <img
-                  src="https://i.imgur.com/zM9CFMm.jpeg"
-                  width={400}
-                  height={225}
-                  alt="News Image 1"
-                  className="rounded-lg  mb-4 cursor-pointer"
-                  style={{ aspectRatio: "400/225", objectFit: "cover" }}
-                />
-                <h3 className="text-2xl font-bold text-[#673AB7] mb-2">¿Cómo puedo apoyar a mi hijo?</h3>
-                <p className="text-lg text-[#757575]">Formas de apoyo emocional.</p>
-                <Link href="https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/guia-para-madres-padres-docentes-grooming" target="_blank">
-                <Button
-                  className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
-                 
-                >
-                  Ver
-                </Button>
-                </Link>
-              </CardContent>
-            </Card>
+               <Card> 
+                <CardContent className="flex flex-col items-center justify-center p-6">
+                  <img
+                    src="https://i.imgur.com/zM9CFMm.jpeg"
+                    width={400}
+                    height={225}
+                    alt="News Image 1"
+                    className="rounded-lg  mb-4 cursor-pointer"
+                    style={{ aspectRatio: "400/225", objectFit: "cover" }}
+                  />
+                  <h3 className="text-2xl font-bold text-[#673AB7] mb-2">¿Cómo puedo apoyar a mi hijo?</h3>
+                  <p className="text-lg text-[#757575]">Formas de apoyo emocional.</p>
+                  <Button
+                    className="bg-[#673AB7] hover:bg-[#512DA8] text-white font-bold py-2 px-4 rounded mt-4 rounded-lg"
+                    
+                  >
+                    Ver
+                  </Button>
+                </CardContent>
+              </Card>
+            
+            </div>
+            
+          </section>
+      
+        </div>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+<p className="text-xs text-my-color text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
+<nav className="sm:ml-auto flex gap-4 sm:gap-6">
 
-          </div>
+<Link href="https://www.facebook.com/share/15RnWCo53f/?mibextid=kFxxJD"
+target="_blank">
+        <img
+          src="https://i.imgur.com/sAEVVs1.png"
+          alt="Icono de facebook"
+          width={32}
+          height={32}
+        
+        />
+      </Link>
+  
 
-        </section>
+<Link href="https://www.instagram.com/dgnyalarioja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+target="_blank">
+        <img
+      
+          src="https://i.imgur.com/rIRhjMy.png "
+          alt="Icono de Instagram"
+          width={32}
+          height={32}
+        
+        />
+      </Link>
 
-      </div>
-    </main>
-    <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-      <p className="text-xs text-my-color text-muted-foreground">© 2024 Esc. Comercio N°2.</p>
-      <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-
-        <Link href="https://www.facebook.com/share/15RnWCo53f/?mibextid=kFxxJD"
-          target="_blank">
-          <img
-            src="https://i.imgur.com/sAEVVs1.png"
-            alt="Icono de facebook"
-            width={32}
-            height={32}
-
-          />
-        </Link>
-
-
-        <Link href="https://www.instagram.com/dgnyalarioja?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          target="_blank">
-          <img
-            src="https://i.imgur.com/rIRhjMy.png "
-            alt="Icono de Instagram"
-            width={32}
-            height={32}
-
-          />
-        </Link>
-
-
-
-
-        <Link className="text-xs hover:underline underline-offset-4" href="https://buenosaires.gob.ar/que-es-el-grooming-y-que-podemos-hacer-para-combatirlo"
-          target='_blank' rel='noopener noreferrer'>
+      
+  
+  
+<Link className="text-xs hover:underline underline-offset-4" href="https://buenosaires.gob.ar/que-es-el-grooming-y-que-podemos-hacer-para-combatirlo" 
+        target='_blank' rel='noopener noreferrer'>
           Contacto de ayuda
         </Link>
-        <a className="text-xs hover:underline underline-offset-4" href="#">
-          Privacy
-        </a>
-      </nav>
-    </footer>
-  </div>
-
-
+  <a className="text-xs hover:underline underline-offset-4" href="#">
+    Privacy
+  </a>
+</nav>
+</footer>
+    </div>
+    
+  
 }
 
 //@ts-ignore
